@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ttFont ttLibVersion="2.4">
+
+  <post>
+    <formatType value="2.0"/>
+    <italicAngle value="0.0"/>
+    <underlinePosition value="-154"/>
+    <underlineThickness value="102"/>
+    <isFixedPitch value="0"/>
+    <minMemType42 value="0"/>
+    <maxMemType42 value="0"/>
+    <minMemType1 value="0"/>
+    <maxMemType1 value="0"/>
+    <psNames>
+      <!-- This file uses unique glyph names based on the information
+           found in the 'post' table. Since these names might not be unique,
+           we have to invent artificial names in case of clashes. In order to
+           be able to retain the original information, we need a name to
+           ps name mapping for those cases where they differ. That's what
+           you see below.
+            -->
+    </psNames>
+    <extraNames>
+      <!-- following are the name that are not taken from the standard Mac glyph order -->
+      <psName name=".null"/>
+      <psName name="uni00A0"/>
+      <psName name="macron"/>
+      <psName name="periodcentered"/>
+      <psName name="hbar"/>
+      <psName name="Itilde"/>
+      <psName name="itilde"/>
+      <psName name="IJ"/>
+      <psName name="ij"/>
+      <psName name="Jcircumflex"/>
+      <psName name="jcircumflex"/>
+      <psName name="kcommaaccent"/>
+      <psName name="kgreenlandic"/>
+      <psName name="Ldotaccent"/>
+      <psName name="ldot"/>
+      <psName name="Nacute"/>
+      <psName name="nacute"/>
+      <psName name="Racute"/>
+      <psName name="Rcommaaccent"/>
+      <psName name="rcommaaccent"/>
+      <psName name="Rcaron"/>
+      <psName name="rcaron"/>
+      <psName name="dotaccentcmb"/>
+      <psName name="Euro"/>
+      <psName name="dotlessj"/>
+      <psName name="commaaccent"/>
+      <psName name="foundryicon"/>
+      <psName name="grave.cap"/>
+      <psName name="acute.cap"/>
+      <psName name="caron.cap"/>
+      <psName name="circumflex.cap"/>
+      <psName name="ring.cap"/>
+      <psName name="dieresis.cap"/>
+      <psName name="tilde.cap"/>
+    </extraNames>
+  </post>
+
+</ttFont>
