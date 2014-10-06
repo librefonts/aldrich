@@ -1,0 +1,217 @@
+Aldrich-Regular.otf.ttx:
+  error: []
+  failure:
+  - autofix: false
+    err_msg: '''EPAR'' not found in [''GlyphOrder'', ''head'', ''hhea'', ''maxp'',
+      ''OS/2'', ''name'', ''cmap'', ''post'', ''CFF '', ''GPOS'', ''hmtx'']'
+    methodDoc: Check If font has EPAR table
+    methodName: test_epar_in_keys
+    name: bakery_lint.tests.upstream.test_check_ttx_requirements
+    tags: &id003 [note]
+    targets: &id002 [upstream-ttx]
+    tool: fontTools
+  fixed:
+  - &id001
+    autofix: true
+    err_msg: '''Aldrich-Regular.otf'' != ''Aldrich-Regular'''
+    methodDoc: Source TTF Font filename equals family style
+    methodName: test_source_ttf_font_filename_equals_familystyle
+    name: bakery_lint.tests.upstream.test_font_filename_eq_familystyle
+    tags: &id006 [note]
+    targets: &id007 [upstream, upstream-ttx]
+    tool: lint
+  - *id001
+  passed: true
+  success:
+  - autofix: false
+    err_msg: ''
+    methodDoc: The font corresponds the font family naming recommendation. See http://forum.fontlab.com/index.php?topic=313.0
+    methodName: test_ttx_family_naming_recommendation
+    name: bakery_lint.tests.upstream.test_check_ttx_fontfamily_recommendations
+    tags: &id009 [note]
+    targets: &id010 [upstream-ttx]
+    tool: TTFont
+  - autofix: false
+    err_msg: ''
+    methodDoc: This very important test checking if OS/2 is in keys method
+    methodName: test_os2_in_keys
+    name: bakery_lint.tests.upstream.test_check_ttx_requirements
+    tags: &id011 [note]
+    targets: *id002
+    tool: fontTools
+  - autofix: false
+    err_msg: ''
+    methodDoc: Font doesnt contain duplicated glyphs. When fontbakery has resulted
+      files with GlyphID <glyphname>#<int> generated, It can't be installed on some
+      Mac OS X. For details see https://github.com/girish-dalvi/Ek-Mukta/issues/1
+    methodName: test_ttx_doesnt_contain_duplicate_glyphs
+    name: bakery_lint.tests.upstream.test_check_ttx_requirements
+    tags: &id012 [note]
+    targets: *id002
+    tool: fontTools
+  - autofix: false
+    err_msg: ''
+    methodDoc: GlyphName length < 30 and does contain allowed chars only
+    methodName: test_glyphname_does_not_contain_disallowed_chars
+    name: bakery_lint.tests.upstream.test_glyphname_does_not_contain_disallowed_chars
+    tags: &id004 [note]
+    targets: &id005 [upstream-ttx]
+    tool: lint
+Aldrich-Regular.ttf.ttx:
+  error: []
+  failure:
+  - autofix: false
+    err_msg: '''EPAR'' not found in [''GlyphOrder'', ''head'', ''hhea'', ''maxp'',
+      ''OS/2'', ''hmtx'', ''LTSH'', ''VDMX'', ''hdmx'', ''cmap'', ''fpgm'', ''prep'',
+      ''cvt '', ''loca'', ''glyf'', ''kern'', ''name'', ''post'']'
+    methodDoc: Check If font has EPAR table
+    methodName: test_epar_in_keys
+    name: bakery_lint.tests.upstream.test_check_ttx_requirements
+    tags: *id003
+    targets: *id002
+    tool: fontTools
+  - autofix: false
+    err_msg: 'Glyph ".null" does not comply conventions. A glyph name may be up to
+      31 characters in length, must be entirely comprised of characters from the following
+      set: A-Z a-z 0-9 .(period) _(underscore). and must not start with a digit or
+      period. The only exception is the special character ".notdef". "twocents", "a1",
+      and "_" are valid glyph names. "2cents" and ".twocents" are not.'
+    methodDoc: GlyphName length < 30 and does contain allowed chars only
+    methodName: test_glyphname_does_not_contain_disallowed_chars
+    name: bakery_lint.tests.upstream.test_glyphname_does_not_contain_disallowed_chars
+    tags: *id004
+    targets: *id005
+    tool: lint
+  fixed:
+  - &id008
+    autofix: true
+    err_msg: '''Aldrich-Regular.ttf'' != ''Aldrich-Regular'''
+    methodDoc: Source TTF Font filename equals family style
+    methodName: test_source_ttf_font_filename_equals_familystyle
+    name: bakery_lint.tests.upstream.test_font_filename_eq_familystyle
+    tags: *id006
+    targets: *id007
+    tool: lint
+  - *id008
+  passed: true
+  success:
+  - autofix: false
+    err_msg: ''
+    methodDoc: The font corresponds the font family naming recommendation. See http://forum.fontlab.com/index.php?topic=313.0
+    methodName: test_ttx_family_naming_recommendation
+    name: bakery_lint.tests.upstream.test_check_ttx_fontfamily_recommendations
+    tags: *id009
+    targets: *id010
+    tool: TTFont
+  - autofix: false
+    err_msg: ''
+    methodDoc: This very important test checking if OS/2 is in keys method
+    methodName: test_os2_in_keys
+    name: bakery_lint.tests.upstream.test_check_ttx_requirements
+    tags: *id011
+    targets: *id002
+    tool: fontTools
+  - autofix: false
+    err_msg: ''
+    methodDoc: Font doesnt contain duplicated glyphs. When fontbakery has resulted
+      files with GlyphID <glyphname>#<int> generated, It can't be installed on some
+      Mac OS X. For details see https://github.com/girish-dalvi/Ek-Mukta/issues/1
+    methodName: test_ttx_doesnt_contain_duplicate_glyphs
+    name: bakery_lint.tests.upstream.test_check_ttx_requirements
+    tags: *id012
+    targets: *id002
+    tool: fontTools
+Project:
+  error: []
+  failure: []
+  fixed: []
+  passed: true
+  success:
+  - autofix: false
+    err_msg: ''
+    methodDoc: Check that diacritic glyph are made completely with composite
+    methodName: test_diacritic_made_as_component
+    name: bakery_lint.tests.upstream.test_diacritic
+    tags: [note]
+    targets: &id013 [upstream-repo]
+    tool: lint
+  - autofix: false
+    err_msg: ''
+    methodDoc: Check that diacritic glyph are made completely with mark method
+    methodName: test_diacritic_made_as_mark_to_mark
+    name: bakery_lint.tests.upstream.test_diacritic
+    tags: [note]
+    targets: *id013
+    tool: lint
+  - autofix: false
+    err_msg: ''
+    methodDoc: Check that diacritic glyph are made completely with flat method
+    methodName: test_diacritic_made_as_own_glyphs
+    name: bakery_lint.tests.upstream.test_diacritic
+    tags: [note]
+    targets: *id013
+    tool: lint
+  - autofix: false
+    err_msg: ''
+    methodDoc: Repository does contain bakery.yaml configuration file
+    methodName: test_bakery_yaml_exists
+    name: bakery_lint.tests.upstream.test_check_upstream_sources
+    tags: [note]
+    targets: &id014 [upstream-repo]
+    tool: FontBakery
+  - autofix: false
+    err_msg: ''
+    methodDoc: Are all copyright notices the same in all styles?
+    methodName: test_copyright_notices_same_across_family
+    name: bakery_lint.tests.upstream.test_check_upstream_sources
+    tags: [note]
+    targets: *id014
+    tool: FontBakery
+  - autofix: false
+    err_msg: ''
+    methodDoc: Repository does containDESCRIPTION.en_us.html file
+    methodName: test_description_html_exists
+    name: bakery_lint.tests.upstream.test_check_upstream_sources
+    tags: [note]
+    targets: *id014
+    tool: FontBakery
+  - autofix: false
+    err_msg: ''
+    methodDoc: Repository does contain FONTLOG.txt file
+    methodName: test_fontlog_txt_exists
+    name: bakery_lint.tests.upstream.test_check_upstream_sources
+    tags: [note]
+    targets: *id014
+    tool: FontBakery
+  - autofix: false
+    err_msg: ''
+    methodDoc: Repository does contain METADATA.json file
+    methodName: test_metadata_json_exists
+    name: bakery_lint.tests.upstream.test_check_upstream_sources
+    tags: [note]
+    targets: *id014
+    tool: FontBakery
+  - autofix: false
+    err_msg: ''
+    methodDoc: Check that glyphs has same number of contours across family
+    methodName: test_font_prepolation_glyph_contours
+    name: bakery_lint.tests.upstream.test_prepolation
+    tags: [note]
+    targets: &id015 [upstream-repo]
+    tool: lint
+  - autofix: false
+    err_msg: ''
+    methodDoc: Check that glyphs has same number of points across family
+    methodName: test_font_prepolation_glyph_points
+    name: bakery_lint.tests.upstream.test_prepolation
+    tags: [note]
+    targets: *id015
+    tool: lint
+  - autofix: false
+    err_msg: ''
+    methodDoc: Check glyph names are all the same across family
+    methodName: test_font_test_prepolation_glyph_names
+    name: bakery_lint.tests.upstream.test_prepolation
+    tags: [note]
+    targets: *id015
+    tool: lint
